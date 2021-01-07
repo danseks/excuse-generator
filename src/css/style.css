@@ -1,0 +1,59 @@
+body {
+	background: #333;
+	padding-top: 20px !important;
+	font-family: 'Handlee', cursive;
+	font-size: 21px;
+}
+
+.inner-footer button[type='submit'] {
+	border: none;
+	font-size: 18px;
+	font-family: 'Handlee', cursive;
+	background: #c6c6c6;
+	font-weight: bold;
+	border-bottom: 1px solid gray;
+	outline: none;
+}
+
+#buttonClick:hover {
+	background-color: #a7a6a6;
+}
+
+.inner {
+	margin: 0 auto;
+	padding: 20px;
+	width: 50%;
+	background: #fff;
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 480px) {
+	.inner {
+		width: calc(100% - 80px);
+	}
+}
+
+.inner h2 {
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.inner p {
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 28px;
+	color: red;
+}
+
+.inner-header {
+	overflow: hidden;
+}
+
+.inner-header img {
+	max-width: 50px;
+	float: right;
+}
+
+.inner-footer {
+	text-align: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Excuse Generator</title>
+		<link rel="stylesheet" href="src/css/style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+		<script src="src/js/excuse.js"></script>
+	</head>
+	<body>
+		<div class="main-content">
+			<header></header>
+			<section>
+				<div class="inner">
+					<div class="inner-header">
+						<img src="https://assets.breatheco.de/apis/img/icon/4geeks.png" alt="" />
+						<h1>Excuse Generator</h1>
+					</div>
+						<h2>Hmmm...You will not believe me but...</h2>
+						<p id="excuse"></p></p>
+					<div class="inner-footer">
+						<button type="submit" id="buttonClick" onclick="newExcuse()">✔ Generate New Excuse</button>
+					</div>
+				</div>
+			</section>
+			<footer></footer>
+		</div>
+	</div>
+		<!-------------------------JAVASCRIPT--------------------------->
+		<script>
+			window.onload = document.getElementById('excuse').innerHTML = generateName();
+		</script>
+	</body>
+</html>
