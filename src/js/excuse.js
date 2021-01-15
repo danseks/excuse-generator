@@ -1,5 +1,5 @@
 function formatString(string) {
-	return string.charAt(0).toUpperCase() + string.slice(1);
+	return string[0].toUpperCase() + string.slice(1);
 }
 
 function randomExcuse(a, b) {
@@ -9,13 +9,13 @@ function randomExcuse(a, b) {
 function generateName() {
 	var who = [
 		"Sorry I'm late, but",
-		'Sorry I forgot your birthday,but',
-		"I couldn't come to your wedding,",
-		"You won't beleive this:",
+		'sorry I forgot your birthday,but',
+		"i couldn't come to your wedding,",
+		"you won't beleive this:",
 		'This sounds crazy, but',
 		'This sounds unbeleivable but',
 		'Holy shit!',
-		'Oh man, ',
+		'oh man, ',
 	];
 
 	var action = [
