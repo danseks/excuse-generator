@@ -1,13 +1,14 @@
+function randomExcuse(arraylength) {
+	return Math.floor(Math.random() * arraylength);
+}
+
 function formatString(string) {
+	console.log(string);
 	return string[0].toUpperCase() + string.slice(1);
 }
 
-function randomExcuse(a, b) {
-	return Math.floor(Math.random() * (a - b)) + b;
-}
-
 function generateName() {
-	var who = [
+	let who = [
 		"Sorry I'm late, but",
 		'sorry I forgot your birthday,but',
 		"i couldn't come to your wedding,",
@@ -18,7 +19,7 @@ function generateName() {
 		'oh man, ',
 	];
 
-	var action = [
+	let action = [
 		'the lord of darkness',
 		'Godzilla',
 		'the human centipede',
@@ -46,7 +47,7 @@ function generateName() {
 		'the creators of southpark',
 	];
 
-	var whe = [
+	let what = [
 		'tried to kill me',
 		'ran me over with a tractor',
 		'ate my homework',
@@ -65,16 +66,28 @@ function generateName() {
 		'gave me a hickey',
 		'set my house on fire',
 		'kidnapped my lizard',
-	];
+    ];
+    
+    let when = [
+	'before the class',
+	'right on time',
+	'when I finished',
+	'during my lunch',
+	'while I was praying',
+    ];
 
-	var excuse =
-		formatString(who[randomExcuse(0, who.length + 1)]) +
-		' ' +
-		formatString(action[randomExcuse(0, action.length + 1)]) +
-		' ' +
-		formatString(whe[randomExcuse(0, whe.length + 1)]);
+    let finalArr = [who, action, what, when];
 
-	return excuse;
+    let string = '';
+
+    for (let i = 0; i < finalArr.length; i++) {
+	    string = string.concat(
+		    ' ',
+		    formatString(finalArr[i][randomExcuse(finalArr[i].length)])
+	    );
+    }
+
+	return string;
 }
 
 function newExcuse() {
