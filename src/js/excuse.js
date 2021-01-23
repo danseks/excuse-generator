@@ -1,22 +1,45 @@
-function randomExcuse(arraylength) {
+const getButtonID = document.querySelector('#generateButton');
+const bongoCat = document.querySelector('#cat-no-animation');
+const bongoCatAnimation = document.querySelector('#cat-animation');
+const textDiv = document.querySelector('#textDiv');
+const loading = document.querySelector('#loading');
+
+window.onload = () => {
+	getButtonID.addEventListener('click', () => {
+		addBongoCat();
+	});
+};
+
+const addBongoCat = () => {
+	textDiv.classList.add('d-none');
+	bongoCat.classList.add('d-none');
+	bongoCatAnimation.classList.remove('d-none');
+	loading.classList.remove('d-none');
+	setTimeout(removeBongoCat, 3000);
+};
+
+const removeBongoCat = () => {
+	loading.classList.add('d-none');
+	bongoCat.classList.remove('d-none');
+	bongoCatAnimation.classList.add('d-none');
+	textDiv.classList.remove('d-none');
+	generateName();
+};
+
+const randomExcuse = (arraylength) => {
 	return Math.floor(Math.random() * arraylength);
-}
+};
 
-function formatString(string) {
-	console.log(string);
-	return string[0].toUpperCase() + string.slice(1);
-}
-
-function generateName() {
+const generateName = () => {
 	let who = [
 		"Sorry I'm late, but",
-		'sorry I forgot your birthday,but',
-		"i couldn't come to your wedding,",
-		"you won't beleive this:",
+		'Sorry I forgot your birthday,but',
+		"I couldn't come to your wedding,",
+		"You won't beleive this:",
 		'This sounds crazy, but',
 		'This sounds unbeleivable but',
 		'Holy shit!',
-		'oh man, ',
+		'Oh man, ',
 	];
 
 	let action = [
@@ -66,30 +89,23 @@ function generateName() {
 		'gave me a hickey',
 		'set my house on fire',
 		'kidnapped my lizard',
-    ];
-    
-    let when = [
-	'before the class',
-	'right on time',
-	'when I finished',
-	'during my lunch',
-	'while I was praying',
-    ];
+	];
 
-    let finalArr = [who, action, what, when];
+	let when = [
+		'before the class',
+		'right on time',
+		'when I finished',
+		'during my lunch',
+		'while I was praying',
+	];
 
-    let string = '';
+	let finalArr = [who, action, what, when];
 
-    for (let i = 0; i < finalArr.length; i++) {
-	    string = string.concat(
-		    ' ',
-		    formatString(finalArr[i][randomExcuse(finalArr[i].length)])
-	    );
-    }
+	let string = '';
 
-	return string;
-}
+	for (let i = 0; i < finalArr.length; i++) {
+		string = string.concat(' ', finalArr[i][randomExcuse(finalArr[i].length)]);
+	}
 
-function newExcuse() {
-	document.getElementById('excuse').innerHTML = generateName();
-}
+	return (document.getElementById('excuse').innerHTML = string);
+};
