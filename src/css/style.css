@@ -533,14 +533,15 @@ path#f3-l9 {
 
 .box {
 	width: 45rem;
-	height: 7rem;
+	height: 9.2rem;
 	border: 0.1rem solid red;
 	border-radius: 0.3rem;
+	padding-top: 2rem;
 }
 
 @media screen and (max-width: 600px) {
 	.box {
-		padding-bottom: 13rem;
+        padding: 1.5rem;
 	}
 }
 
